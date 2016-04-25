@@ -1,0 +1,16 @@
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
+<h2><%= @vent.name %> said...</h2>
+
+<%= @vent.body %>
+
+<div class="read-responses">
+  <h3>Read Responses</h3>
+  <% @vent.responses.each do |response| %>
+  <p><%= response.name %></p>
+  <div class="response"><%= response.body %></div>
+  <%= link_to "Delete Comment", vent_path(response), method: :delete %>
+  <% end %>
+</div>

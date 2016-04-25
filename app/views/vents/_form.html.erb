@@ -1,0 +1,14 @@
+<div class="new-vent">
+  <%= form_for @vent do |f| %>
+    <div class="vent-name">
+      <%= f.text_field :name, :placeholder => "Enter Name" %>
+    </div>
+    <div class="vent-mood">
+      <%= f.select :mood, [['Your Current Mood'],['Great', 1], ['Good', 2], ['Meh...', 3], ['Bad', 4], ['Horrible', 5]], { :class => "mood-select" } %>
+    </div>
+    <div class="vent-body">
+      <%= f.text_area :body, :placeholder => "What's on your mind?\nWrite as much or as little as you need!" %>
+    </div>
+    <%= f.submit "Vent It!" %>
+  <% end %>
+</div>
