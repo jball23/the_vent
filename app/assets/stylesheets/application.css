@@ -34,8 +34,10 @@ textarea {
   padding: 10px;
 }
 
-.mood-select {
-  display: none;
+.now-venting {
+  background-color: #888888;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 .vent-index {

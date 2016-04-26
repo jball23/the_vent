@@ -1,0 +1,11 @@
+<div class="add-response">
+  <%= form_for [@vent, @response] do |f| %>
+  <div class="response-name">
+    <%= f.text_field :name, :placeholder => "Your Name" %>
+  </div>
+  <div class="response-body">
+    <%= f.text_area :body, :placeholder => "Enter Your Response" %>
+  </div>
+  <%= f.submit "Respond" %>
+  <% end %>
+</div>

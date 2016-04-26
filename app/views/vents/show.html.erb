@@ -4,13 +4,20 @@
 
 <h2><%= @vent.name %> said...</h2>
 
-<%= @vent.body %>
+<p><%= @vent.body %></p>
+<%= link_to "Delete Vent", vent_path(@vent), method: :delete %>
 
 <div class="read-responses">
   <h3>Read Responses</h3>
   <% @vent.responses.each do |response| %>
-  <p><%= response.name %></p>
-  <div class="response"><%= response.body %></div>
-  <%= link_to "Delete Comment", vent_path(response), method: :delete %>
+    <p><%= response.name %></p>
+  <div class="response">
+    <%= response.body %>
+  </div>
   <% end %>
 </div>
+
+<%= @response.vent.body %>
+
+<%= link_to "add response", new_vent_response_path(@vent) %>
+<%= render 'responses/form' %>

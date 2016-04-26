@@ -8,6 +8,7 @@ class VentsController < ApplicationController
   def show
     @vent = Vent.find(params[:id])
     @responses = Response.all
+    @response = @vent.responses.new
   end
 
   def new
@@ -31,6 +32,10 @@ class VentsController < ApplicationController
   end
 
   def destroy
+    @vent = Vent.find(params[:id])
+    @vent.destroy
+    flash[:success] = "Your Vent has been deleted!"
+    redirect_to vents_path
   end
 
   private
