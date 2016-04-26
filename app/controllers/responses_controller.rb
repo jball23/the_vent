@@ -13,22 +13,31 @@ class ResponsesController < ApplicationController
   end
 
   def edit
+    @vent = Vent.find(params[:vent_id])
+    @response = @vent.responses.find(params[:id])
+  end
+
+  def update
+    @vent = Vent.find(params[:vent_id])
+    @response = @vent.responses.find(params[:id])
+    @response.update(response_params)
+    redirect_to @vent
   end
 
   def create
-    puts "*" * 50
-    puts params
-    puts "*" * 50
     @vent = Vent.find(params[:vent_id])
-    @response = @vent.responses.create(response_params)
+    @response = @vent.responses.new(response_params)
+    @response.save
+    if @response.save
+      flash[:success] = "You vented! We hope you feel better now!"
     redirect_to vent_path(@vent)
   end
 
   def destroy
     @vent = Vent.find(params[:vent_id])
-    @response = @vent.responses.find(params[:vent_id])
+    @response = @vent.responses.find(params[:id])
     @response.destroy
-    flash[:success] = "Your Vent has been deleted!"
+    flash[:success] = "Your response went bye bye!"
     redirect_to vent_path(@vent)
   end
 

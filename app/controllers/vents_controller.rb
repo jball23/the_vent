@@ -26,10 +26,13 @@ class VentsController < ApplicationController
   end
 
   def edit
-
+    @vent = Vent.find(params[:id])
   end
 
   def update
+    @vent = Vent.find(params[:id])
+    @vent.update(vent_params)
+    redirect_to @vent
   end
 
   def destroy
