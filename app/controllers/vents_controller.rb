@@ -8,7 +8,7 @@ class VentsController < ApplicationController
   def show
     @vent = Vent.find(params[:id])
     @responses = Response.all
-    @response = @vent.responses.new
+    @response = Response.new
   end
 
   def new
@@ -26,6 +26,7 @@ class VentsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update

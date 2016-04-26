@@ -5,19 +5,20 @@
 <h2><%= @vent.name %> said...</h2>
 
 <p><%= @vent.body %></p>
+
 <%= link_to "Delete Vent", vent_path(@vent), method: :delete %>
 
 <div class="read-responses">
   <h3>Read Responses</h3>
+
   <% @vent.responses.each do |response| %>
     <p><%= response.name %></p>
-  <div class="response">
-    <%= response.body %>
-  </div>
+    <div class="response"><%= response.body %></div>
+    <%= link_to "Edit / Delete Response", edit_vent_response_path(@vent, response) %>
   <% end %>
 </div>
 
-<%= @response.vent.body %>
-
-<%= link_to "add response", new_vent_response_path(@vent) %>
-<%= render 'responses/form' %>
+<div class="response-form">
+  <h3>Add Response</h3>
+  <%= render '/responses/form' %>
+</div>
