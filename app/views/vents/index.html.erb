@@ -1,16 +1,16 @@
 <h2>Don't sweat it, just Vent.it!</h2>
 
 <div class="vent-index">
-  <%= render partial: 'form' %>
+  <%= render 'form' %>
 </div>
 
 <div class="now-venting">
   <h2> NOW VENTING </h2>
 
   <% @vents.each do |vent| %>
-  <p><%= vent.name %></p>
-  <p><%= vent.body %></p>
-  <p><%= vent.mood %></p>
-  <%= link_to "Add / View Responses", vent_path(vent) %>
+    <p><%= vent.name %></p>
+    <p><%= vent.body %></p>
+    <p><%= vent.mood %></p>
+    <%= link_to "Add / View Responses", vent_path(vent) %>
   <% end %>
 </div>

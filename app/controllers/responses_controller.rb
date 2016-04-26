@@ -29,7 +29,7 @@ class ResponsesController < ApplicationController
     @response = @vent.responses.new(response_params)
     @response.save
     if @response.save
-      flash[:success] = "You vented! We hope you feel better now!"
+      flash[:success] = "Thanks for your response!"
     redirect_to vent_path(@vent)
     end
   end
