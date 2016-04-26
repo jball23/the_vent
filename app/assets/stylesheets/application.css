@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  font-family: 'helvetica', sans-serif;
   text-align: center;
   position: relative;
 }
@@ -30,6 +31,19 @@ textarea {
   height: 150px;
   margin: 10px;
   padding: 10px;
+}
+
+#top-menu {
+  margin: 10px;
+}
+
+#top-menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #00adef;
+  font-size: 1.2em;
+  border: 1px solid #00adef;
+  padding: 5px;
 }
 
 .now-venting {

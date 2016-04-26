@@ -31,6 +31,7 @@ class ResponsesController < ApplicationController
     if @response.save
       flash[:success] = "You vented! We hope you feel better now!"
     redirect_to vent_path(@vent)
+    end
   end
 
   def destroy
