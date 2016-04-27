@@ -7,13 +7,21 @@
   <%= render 'form' %>
 </div>
 
-<div class="now-venting">
-  <h2> NOW VENTING </h2>
+<div class="read-vents">
+  <h4><a href="#now-venting">Read More Vents</a></h4>
+  <a href="#now-venting">
+    <div class="arrow-down"></div>
+  </a>
+</div>
 
-  <% @vents.each do |vent| %>
-    <p><%= vent.name %></p>
-    <p><%= vent.body %></p>
-    <p><%= vent.mood %></p>
-    <%= link_to "Add / View Responses", vent_path(vent) %>
+<div id="now-venting">
+  <h1>NOW VENTING</h1>
+
+  <% @vents.reverse_each do |vent| %>
+    <div id="vent">
+      <div class="main-vent-name"><%= vent.name %> vented...</div>
+      <div class="main-vent-body">"<%= vent.body %>"</div>
+      <div class="main-vent-response"><%= link_to "Add / View Responses", vent_path(vent) %></div>
+    </div>
   <% end %>
 </div>

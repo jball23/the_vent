@@ -1,14 +1,16 @@
 <div class="new-vent">
   <%= form_for @vent do |f| %>
-    <div class="vent-name">
-      <%= f.text_field :name, :class => "vent-text-field", :placeholder => "Enter Name" %>
-    </div>
-    <div class="vent-mood">
-      <%= f.text_field :mood, :class => "vent-text-field", :placeholder => "Add Tag (ie. My Boss)" %>
-    </div>
-    <div class="vent-body">
-      <%= f.text_area :body, :class => "vent-text-area", :placeholder => "Enter your Vent here..." %>
-    </div>
-    <%= f.submit "Vent It!", :class => "vent-submit-button" %>
+      <div class="form-vent-name">
+        <%= f.text_field :name, class: "vent-text-field", placeholder: "Enter Name" %>
+      </div>
+        <%= f.fields_for :taggings do |taggings_form| %>
+          <div class="form-vent-taggings">
+            <%= taggings_form.text_field :tags, class: "vent-text-field", placeholder: "Enter Tag (ie. Politics)" %>
+          </div>
+        <% end %>
+      <div class="form-vent-body">
+        <%= f.text_area :body, class: "vent-text-area", placeholder: "Enter your vent here...", rows: 5 %>
+      </div>
+    <%= f.submit "Vent It!", class: "form-vent-submit-button"%>
   <% end %>
 </div>

@@ -2,7 +2,9 @@
   <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
 
-<h2><%= @vent.name %> said...</h2>
+<div class="vent-name">
+  <h2><%= @vent.name %> said...</h2>
+</div>
 
 <div class="vent-body">
   <p>"<%= @vent.body %>"</p>

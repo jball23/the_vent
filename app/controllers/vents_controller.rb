@@ -13,16 +13,21 @@ class VentsController < ApplicationController
 
   def new
     @vent = Vent.new
+    @taggings = @vent.taggings.new
+    @tag = @taggings.build_tag
   end
 
   def create
+    tags = params[:vent][:taggings][:tags]
     @vent = Vent.new(vent_params)
-      if @vent.save
-        flash[:success] = "Thanks for sharing!"
-        redirect_to @vent
-      else
-        render 'index'
-      end
+    if @vent.save
+      flash[:success] = "Thanks for sharing!"
+      tag = Tag.find_or_create_by(name: tags)
+      tagging = Tagging.create(vent_id: @vent.id, tag_id: tag.id)
+      redirect_to @vent
+    else
+      render vents_path
+    end
   end
 
   def edit
@@ -44,7 +49,7 @@ class VentsController < ApplicationController
 
   private
   def vent_params
-    params.require(:vent).permit(:name, :body, :mood)
+    params.require(:vent).permit(:name, :body, :all_tags)
   end
 
 end

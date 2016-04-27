@@ -38,7 +38,7 @@ header {
   padding-top: 10px;
 }
 
-h2 {
+h1, h2 {
   color: #666;
 }
 
@@ -77,7 +77,7 @@ h2 {
   font-weight: bold;
 }
 
-.vent-submit-button {
+.form-vent-submit-button {
   border: none;
   cursor: pointer;
   background-color: #00adef;
@@ -88,7 +88,7 @@ h2 {
   text-transform: uppercase;
 }
 
-.vent-body {
+.form-vent-body {
   width: 450px;
   font-size: 1.3em;
   font-weight: bold;
@@ -96,19 +96,82 @@ h2 {
   margin: 0 auto;
 }
 
-.now-venting {
+#now-venting {
   margin: 40px auto;
   padding: 20px;
+  background-color: white;
 }
 
 .vent-index {
   margin: 50px 0px 20px 0px;
 }
 
-.vent-name {
+.form-vent-name {
   display: inline-block;
 }
 
-.vent-mood {
+.form-vent-taggings {
   display: inline-block;
+}
+
+.read-vents h4 {
+  width: 200px;
+  margin: 70px auto;
+  margin-bottom: 10px;
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+  border-top: 35px solid #00adef;
+  margin: 0 auto;
+}
+
+.main-vent-name {
+  font-size: 1.1em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.main-vent-body {
+  font-size: 1.3em;
+  padding: 10px;
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.main-vent-response {
+  text-align: right;
+  margin: 10px 10px 0px 0px;
+}
+
+#vent {
+  background-color: #00adef;
+  color: white;
+  margin: 20px auto;
+  text-align: left;
+  width: 65%;
+  padding: 5px;
+}
+
+.vent-body {
+  background-color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  width: 65%;
+  min-height: 100px;
+  margin: 40px auto;
+  padding: 10px 20px;
+  color: #666;
+}
+
+.vent-name {
+  text-transform: capitalize;
 }
