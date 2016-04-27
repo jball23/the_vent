@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :vents do
     resources :responses
+    resources :tags
   end
 
 
