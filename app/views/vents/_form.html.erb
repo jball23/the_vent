@@ -1,14 +1,14 @@
 <div class="new-vent">
   <%= form_for @vent do |f| %>
     <div class="vent-name">
-      <%= f.text_field :name, :placeholder => "Enter Name" %>
+      <%= f.text_field :name, :class => "vent-text-field", :placeholder => "Enter Name" %>
     </div>
     <div class="vent-mood">
-      <%= f.select :mood, [['Your Current Mood'],['Great', 1], ['Good', 2], ['Meh...', 3], ['Bad', 4], ['Horrible', 5]], { :class => "mood-select" } %>
+      <%= f.text_field :mood, :class => "vent-text-field", :placeholder => "Add Tag (ie. My Boss)" %>
     </div>
     <div class="vent-body">
-      <%= f.text_area :body, :placeholder => "What's on your mind?\nWrite as much or as little as you need!" %>
+      <%= f.text_area :body, :class => "vent-text-area", :placeholder => "Enter your Vent here..." %>
     </div>
-    <%= f.submit "Vent It!" %>
+    <%= f.submit "Vent It!", :class => "vent-submit-button" %>
   <% end %>
 </div>

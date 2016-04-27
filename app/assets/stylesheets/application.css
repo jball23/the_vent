@@ -13,28 +13,38 @@
  *= require_tree .
  *= require_self
  */
-html {
-  height: 100%;
+
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
   font-family: 'helvetica', sans-serif;
+  background-color: #f2f2f2;
   text-align: center;
   position: relative;
 }
 
-textarea {
-  width: 400px;
-  height: 150px;
-  margin: 10px;
-  padding: 10px;
+header {
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;
+}
+
+h2 {
+  color: #666;
 }
 
 #top-menu {
-  margin: 10px;
+  margin: 20px;
+  height: 45px;
 }
 
 #top-menu a {
@@ -42,12 +52,43 @@ textarea {
   text-transform: uppercase;
   color: #00adef;
   font-size: 1.2em;
-  border: 1px solid #00adef;
+  font-weight: bold;
+  border: 3px solid #00adef;
   padding: 5px;
+  margin: 0px 10px 0px 10px;
+}
+
+.vent-text-field {
+  border: 3px solid #00adef;
+  width: 210px;
+  padding: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0px 13px 0px 13px;
+}
+
+.vent-text-area {
+  border: 3px solid #00adef;
+  width: 450px;
+  height: 150px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.vent-submit-button {
+  border: none;
+  cursor: pointer;
+  background-color: #00adef;
+  color: white;
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .now-venting {
-  background-color: #888888;
   margin: 40px auto;
   padding: 20px;
 }
