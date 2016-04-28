@@ -1,0 +1,3 @@
+<% @tags.each do |tag| %>
+  <%= link_to tag.name, vent_tag_path(tag.id) %>
+<% end %>

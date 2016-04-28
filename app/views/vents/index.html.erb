@@ -22,9 +22,11 @@
       <div class="main-vent-name"><%= vent.name %> vented...</div>
       <div class="main-vent-body">"<%= vent.body %>"</div>
       <div class="main-vent-response"><%= link_to "Add / View Responses", vent_path(vent) %></div>
-      <% vent.tags.each do |tag| %>
-        <%= tag.name %>
-      <% end %>
+      <div class="main-tag-name">
+        <% vent.tags.each do |tag| %>
+          <%= link_to tag.name, vent_tags_path(vent) %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
