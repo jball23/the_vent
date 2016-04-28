@@ -58,16 +58,17 @@ h1, h2 {
   margin: 0px 10px 0px 10px;
 }
 
-.vent-text-field {
+.vent-text-field, .response-text-field {
   border: 3px solid #00adef;
   width: 210px;
   padding: 5px;
   font-size: 1.1em;
   font-weight: bold;
   margin: 0px 13px;
+  margin-top: 20px;
 }
 
-.vent-text-area {
+.vent-text-area, .response-text-area {
   border: 3px solid #00adef;
   width: 450px;
   height: 150px;
@@ -77,7 +78,17 @@ h1, h2 {
   font-weight: bold;
 }
 
-.form-vent-submit-button {
+.response-body {
+  background-color: white;
+  width: 450px;
+  height: 100px;
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.form-vent-submit-button, .response-submit-button {
   border: none;
   cursor: pointer;
   background-color: #00adef;
@@ -86,11 +97,12 @@ h1, h2 {
   font-size: 1.3em;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .form-vent-body {
   width: 450px;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: bold;
   color: #666;
   margin: 0 auto;
@@ -100,6 +112,7 @@ h1, h2 {
   margin: 40px auto;
   padding: 20px;
   background-color: white;
+  width: 65%;
 }
 
 .vent-index {
@@ -116,11 +129,33 @@ h1, h2 {
 
 .read-vents h4, a {
   width: 200px;
-  margin: 70px auto;
+  margin: 50px auto;
   margin-bottom: 10px;
   color: #666;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.read-responses {
+  border-top: 1px solid #666;
+  color: #666;
+}
+
+.read-responses .response-body {
+  padding-top: 20px;
+}
+
+.read-responses p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.response-form {
+  color: #666;
+}
+
+.response-form h2 {
+  margin: 30px 0px 0px 0px;
 }
 
 .arrow-down {
@@ -148,15 +183,16 @@ h1, h2 {
 
 .main-vent-response {
   text-align: right;
-  margin: 10px 10px 0px 0px;
+  margin: 10px 10px 40px 0px;
 }
 
 #vent {
   background-color: #00adef;
   color: white;
   margin: 20px auto;
+  margin-bottom: 0;
   text-align: left;
-  width: 65%;
+  width: 100%;
   padding: 5px;
 }
 
@@ -165,9 +201,10 @@ h1, h2 {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
-  width: 65%;
+  width: 100%;
   min-height: 100px;
   margin: 40px auto;
+  margin-bottom: 10px;
   padding: 10px 20px;
   color: #666;
 }
@@ -175,4 +212,41 @@ h1, h2 {
 .vent-name {
   text-transform: capitalize;
   margin-top: 40px;
+}
+
+.vent-show-wrapper {
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.edit-vent, .delete-vent {
+  text-align: right;
+  display: inline;
+  margin: 0 10px;
+}
+
+.main-tag-name {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.tag-vent-name {
+  color: #666;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.tag-vent-body {
+  color: #666;
+  font-size: 1.6em;
+  font-weight: bold;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 65%;
+  margin: 0px auto;
+  margin-bottom: 30px;
 }

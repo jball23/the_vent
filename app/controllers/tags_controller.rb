@@ -6,8 +6,8 @@ class TagsController < ApplicationController
   end
 
   def show
-    @vent = Vent.find(params[:id])
-    @tags = Tag.all
+    @tag = Tag.find(params[:id])
+    @vent = @tag.vents
   end
 
 end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: "vents#index"
-
+  resources :tags
   resources :vents do
     resources :responses
     resources :tags
