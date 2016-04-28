@@ -3,6 +3,7 @@ class VentsController < ApplicationController
   def index
     @vents = Vent.all
     @vent = Vent.new
+    @tags = Tag.all
   end
 
   def show
