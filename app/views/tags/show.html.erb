@@ -1,5 +1,5 @@
 <div class="tag-vent">
-  <% @tag.vents.each do |vent| %>
+  <% @tag.vents.reverse_each do |vent| %>
     <div class="tag-vent-name"><%= vent.name %> vented...</div>
     <div class="tag-vent-body">"<%= vent.body %>"</div>
   <% end %>
